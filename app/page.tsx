@@ -26,8 +26,8 @@ const Page = async () => {
         <ul className="events">
           {events &&
             events.length > 0 &&
-            events.map((event) => (
-              <EventCard key={(event as IEvent).slug} {...(event as IEvent)} />
+            events.map((event: IEvent) => (
+              <EventCard key={event.slug} {...event} />
             ))}
         </ul>
       </div>
